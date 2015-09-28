@@ -27,7 +27,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
-            debuggable true
             def SERVER_KEY = ServerAcessKey  ?: '"Define Server Key"';
             resValue 'string', 'SERVER_KEY', SERVER_KEY
             def READABILITY_KEY = '"' + ReadabilityKey + '"' ?: '"Define Readability Key"';

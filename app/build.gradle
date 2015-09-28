@@ -32,6 +32,13 @@ android {
             def READABILITY_KEY = '"' + ReadabilityKey + '"' ?: '"Define Readability Key"';
             buildConfigField 'String', 'READABILITY_KEY', READABILITY_KEY
         }
+        
+        debug {
+            def SERVER_KEY = ServerAcessKey ?: '"Define Server Key"';
+            resValue 'string', 'SERVER_KEY', SERVER_KEY
+            def READABILITY_KEY = '"' + ReadabilityKey + '"' ?: '"Define Readability Key"';
+            buildConfigField 'String', 'READABILITY_KEY', READABILITY_KEY
+        }
 
     }
 

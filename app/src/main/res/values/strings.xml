@@ -1,0 +1,72 @@
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
+    <string name="app_name">Offline Reader</string>
+
+
+    <string name="selected_count">%1$s selected</string>
+
+    <string name="roboto_medium">fonts/Roboto-Medium.ttf</string>
+    <string name="roboto_regular">fonts/Roboto-Regular.ttf</string>
+    <string name="roboto_light">fonts/Roboto-Light.ttf</string>
+    <string name="roboto_bold">fonts/Roboto-Bold.ttf</string>
+
+
+    <string name="title_activity_nearby_messages">Nearby</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+
+    <string name="search_hint">Search by title or url</string>
+    <string name="search">Search</string>
+    <string name="title_widget_detail">Reading Widget</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="title_activity_intro">IntroActivity</string>
+    <string name="webpage_not_downloaded">Webpage has not been downloaded</string>
+    <string name="webpage_displaying_content">Webpage is downloading. Currently displaying only the content of the page</string>
+    <string name="downloading_webpage">Downloading webpage</string>
+    <string name="downloadging_in_progress">Download in progress..</string>
+    <string name="tts_not_initialized">Text to speech is not yet initialized in this device. Please try again later</string>
+    <string name="no_internet_connectivity">No internet connectivity at the moment. Please check your settings.</string>
+    <string name="unsuccesfull">Unsuccessful</string>
+    <string name="readability">https://www.readability.com/</string>
+    <string name="offline_reader">Offline Reader</string>
+    <string name="items_selected"><xliff:g id="condition">%1$s</xliff:g> selected</string>
+    <string name="item_deleted">Item Deleted</string>
+    <string name="undo">Undo</string>
+    <string name="unable_to_connect_google_services">Unable to connect to Google Play Services</string>
+    <string name="share_content">Share your content</string>
+    <string name="resolve_failure">Failed to resolve error with code <xliff:g id="condition">%1$s</xliff:g></string>
+    <string name="permission_required">Permission Required to recieve data</string>
+    <string name="grant">GRANT</string>
+    <string name="select_items_to_send">Please select items to send</string>
+    <string name="error_grant_permission">Error occured. Grant permission and press send again or check connectivity.</string>
+    <string name="add_articles">Add articles</string>
+    <string name="start_adding_articles">Start adding articles by clicking on the options menu in your browser</string>
+    <string name="click_on_share">Click on the share button.</string>
+    <string name="select_add_offline">Select Add to Offline Reader.</string>
+    <string name="open_first_time">Open the saved article first time with internet connection.</string>
+    <string name="no_articles_Added">No articles added.</string>
+    <string name="share_articles_with_ppl">Share your articles with people around you.</string>
+    <string name="internet_conn_require">Internet Connection is required.</string>
+    <string name="receive">Recieve</string>
+    <string name="send">Send</string>
+
+    <string name="options">Options</string>
+    <string name="share">Share</string>
+    <string name="tts">Text To Speech</string>
+    <string name="delete">Delete</string>
+    <string name="reading_list">Reading List</string>
+    <string name="generic_image">Generic image for the article</string>
+    <string name="article_title">title of the article</string>
+    <string name="article_desc">Description of the article</string>
+    <string name="article_url">Url of the article</string>
+    <string name="article_image">One of the images from the article</string>
+    <string name="no_articles_added">Image signifying no articles added</string>
+    <string name="image_sharing">Generic image representing sharing data between devices</string>
+    <string name="button_receive">Button to start receiving data</string>
+    <string name="button_send">Button to start sending data</string>
+    <string name="generic_image_file_tranfer">Generic images indicating transfer of files have started</string>
+    <string name="more_options_fab">Click on this button to get more options related to this article</string>
+    <string name="webview">View displaying the article</string>
+    <string name="checkbox">Checkbox to select or deselct this item</string>
+    <string name="delete_items">Delete items</string>
+    <string name="select_all">Select All</string>
+    <string name="nearby">Nearby</string>
+</resources>

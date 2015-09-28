@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="actionBar">48dp</dimen>
+    <dimen name="card_margin">30dp</dimen>
+</resources>

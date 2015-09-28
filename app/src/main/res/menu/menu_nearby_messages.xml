@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.krypto.offlineviewer.nearby.NearbyMessagesActivity">
+    <item
+        android:id="@+id/send_msg"
+        android:icon="@drawable/ic_send_white_24dp"
+        android:orderInCategory="100"
+        android:title="@string/send"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/select_all"
+        android:checkable="true"
+        android:icon="@drawable/ic_select_all_white_24dp"
+        android:orderInCategory="100"
+        android:title="@string/select_all"
+        app:showAsAction="always"/>
+</menu>

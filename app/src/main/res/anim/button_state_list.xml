@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="true" android:state_pressed="true">
+
+        <objectAnimator android:duration="500"
+                        android:propertyName="translationZ"
+                        android:valueTo="20"
+                        android:valueType="floatType"/>
+    </item>
+    <!-- base state -->
+    <item android:state_enabled="true">
+        <objectAnimator android:duration="500"
+                        android:propertyName="translationZ"
+                        android:valueFrom="10"
+                        android:valueType="floatType"/>
+    </item>
+</selector>

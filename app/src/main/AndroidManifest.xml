@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.krypto.offlineviewer" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/offline"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:supportsRtl="true">
+        <meta-data
+            android:name="com.google.android.nearby.messages.API_KEY"
+            android:value="@string/SERVER_KEY" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".reading_list.MainActivity"
+            android:label="Offline Reader"
+            android:theme="@style/AppTheme.BrandedLaunch" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <activity-alias
+            android:name="Offline Reader"
+            android:targetActivity=".reading_list.MainActivity"
+            android:label="Add to Offline Reader">
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+
+        </activity-alias>
+
+        <service android:name=".service.WebpageService" />
+        <service android:name=".service.SerializeTask" />
+        <service android:name=".service.DownloadTextService"/>
+        <service android:name=".service.DownloadService"/>
+
+        <provider
+            android:name=".storage.DataProvider"
+            android:authorities="com.krypto.offlineviewer"
+            android:exported="false" />
+
+        <activity
+            android:name=".nearby.NearbyMessagesActivity"
+            android:label="@string/title_activity_nearby_messages"
+            android:parentActivityName=".reading_list.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".reading_list.MainActivity" />
+        </activity>
+        <activity
+            android:name=".webview.WebViewActivity"
+            android:configChanges="keyboard|keyboardHidden|screenSize|orientation"
+            android:label="@string/title_activity_web_view"
+            android:parentActivityName=".reading_list.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".reading_list.MainActivity" />
+        </activity>
+
+        <receiver
+            android:name=".widgets.DetailWidgetProvider"
+            android:enabled="@bool/widget_detail_enabled"
+            android:label="@string/title_widget_detail" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="barqsoft.footballscores.ACTION_DATA_UPDATED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_detail" />
+        </receiver>
+
+        <service
+            android:name=".widgets.DetailWidgetRemoteViewsService"
+            android:enabled="@bool/widget_detail_enabled"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".app_intro.IntroActivity"
+            android:label="@string/title_activity_intro" >
+        </activity>
+    </application>
+
+</manifest>

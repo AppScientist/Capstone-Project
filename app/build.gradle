@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.krypto.offlineviewer"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../buildsystem/keystore.jks")
+            storePassword "mykeystore"
+            keyAlias "mykeystore"
+            keyPassword "mykeystore"
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            debuggable true
+            def SERVER_KEY = ServerAcessKey  ?: '"Define Server Key"';
+            resValue 'string', 'SERVER_KEY', SERVER_KEY
+            def READABILITY_KEY = '"' + ReadabilityKey + '"' ?: '"Define Readability Key"';
+            buildConfigField 'String', 'READABILITY_KEY', READABILITY_KEY
+        }
+
+    }
+
+    packagingOptions{
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+repositories {
+    maven {
+        url 'http://dl.bintray.com/amulyakhare/maven'
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile 'com.android.support:cardview-v7:23.0.1'
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    compile 'com.android.support:design:23.0.1'
+    compile 'konifar:fab-transformation:1.0.0'
+    compile 'com.google.android.gms:play-services-nearby:8.1.0'
+    compile 'de.ruedigermoeller:fst:2.40'
+    compile 'com.google.android.gms:play-services-ads:8.1.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'org.jsoup:jsoup:1.8.3'
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta1'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta1'
+    compile 'com.github.paolorotolo:appintro:3.2.0'
+    compile 'com.android.support:percent:23.0.1'
+
+}

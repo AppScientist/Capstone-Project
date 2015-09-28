@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <color name="accent">#FFAB40</color>
+    <color name="background">#303030</color>
+
+    <!--textview colors-->
+    <color name="md_black_87">#DE000000</color>
+    <color name="md_black_54">#8A000000</color>
+    <color name="md_black_20">#33000000</color>
+
+    <color name="md_green_500">#4CAF50</color>
+    <color name="md_red_500">#F44336</color>
+
+    <color name="empty_text">#E0E0E0</color>
+</resources>

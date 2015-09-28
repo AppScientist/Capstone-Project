@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             tools:context="com.krypto.offlineviewer.nearby.NearbySendFragment">
+
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/empty_state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/empyty_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/empty_state"
+            android:contentDescription="@string/no_articles_added"/>
+
+        <TextView
+            android:id="@+id/empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_articles_Added"
+            android:textColor="@color/empty_text"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/animation"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/ic_nearby"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:contentDescription="@string/generic_image_file_tranfer"/>
+
+
+</FrameLayout>

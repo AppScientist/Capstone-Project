@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/primary"
+    >
+
+
+    <item android:id="@android:id/mask">
+        <shape>
+            <solid
+                android:color="@android:color/black" />
+        </shape>
+    </item>
+
+    <item>
+        <selector>
+            <item  android:state_activated="true">
+                <color android:color="@color/md_black_20" />
+            </item>
+            <item>
+                <color android:color="@android:color/transparent" />
+            </item>
+        </selector>
+    </item>
+
+
+</ripple>

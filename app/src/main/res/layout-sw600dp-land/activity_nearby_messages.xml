@@ -1,0 +1,49 @@
+<android.support.percent.PercentRelativeLayout
+    android:id="@+id/fragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorPrimary"
+        android:nextFocusLeft="@+id/nearbyFragment"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="20sp">
+
+        </TextView>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/shadow"
+        android:layout_below="@id/app_bar"/>
+
+    <FrameLayout
+        android:id="@id/nearbyFragment"
+        android:layout_below="@id/app_bar"
+        app:layout_widthPercent="50%"
+        app:layout_heightPercent="100%"
+        android:nextFocusRight="@+id/nearbyActionFragment"></FrameLayout>
+
+    <FrameLayout
+        android:id="@id/nearbyActionFragment"
+        app:layout_widthPercent="50%"
+        app:layout_heightPercent="100%"
+        android:layout_below="@id/app_bar"
+        android:layout_toRightOf="@id/nearbyFragment"
+        android:layout_toEndOf="@id/nearbyFragment"
+        android:nextFocusUp="@id/app_bar"></FrameLayout>
+</android.support.percent.PercentRelativeLayout>
